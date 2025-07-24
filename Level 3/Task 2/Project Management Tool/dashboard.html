@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ProjectSphere | Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4a90e2, #0077c2);
+      padding: 60px 20px 40px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 16px;
+      margin: 10px 0 10px;
+      color: #e0f0ff;
+    }
+
+    #userEmail {
+      font-size: 14px;
+      color: #d6edff;
+      display: block;
+    }
+
+    .logout-container {
+      text-align: right;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+
+    #logoutBtn {
+      background-color: #ff5c5c;
+      border: none;
+      color: white;
+      padding: 6px;
+      font-size: 12px;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #logoutBtn:hover {
+      background-color: #d43f3f;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    h3 {
+      color: #0077c2;
+      margin-top: 30px;
+    }
+
+    form {
+      margin-bottom: 25px;
+    }
+
+    input, select, button {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #0077c2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    #projectMsg,
+    #taskMsg {
+      font-size: 14px;
+      color: green;
+    }
+
+    #task-list {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌟 Welcome to ProjectSphere Dashboard 🌟</h1>
+    <p>Manage your projects and tasks efficiently!</p>
+    <span id="userEmail">user@example.com</span>
+
+    <div class="logout-container">
+      <button id="logoutBtn" title="Logout">⎋</button>
+    </div>
+  </header>
+
+  <main>
+    <h3>📌 Create a New Project</h3>
+    <form id="createProjectForm">
+      <input type="text" id="projectTitle" placeholder="Enter project title" required />
+      <input type="text" id="projectDesc" placeholder="Enter project description" required />
+      <button type="submit">Create Project</button>
+      <p id="projectMsg"></p>
+    </form>
+
+    <h3>📋 Your Projects</h3>
+    <ul id="projectList"></ul>
+
+    <h3>✅ Add a Task to Selected Project</h3>
+    <input type="hidden" id="selected-project-id" />
+    <form id="task-form">
+      <input type="text" id="task-title" placeholder="Enter task title" required />
+      <input type="text" id="task-desc" placeholder="Enter task description" required />
+      <select id="assigned-to" required>
+        <option value="">-- Select a user --</option>
+      </select>
+      <button type="submit">Add Task</button>
+      <p id="taskMsg"></p>
+    </form>
+
+    <h3>📂 Project Tasks</h3>
+    <div id="task-list"></div>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

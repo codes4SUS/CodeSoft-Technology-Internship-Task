@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Project Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Project Details</h2>
+    <div id="projectDetails">
+      <p><strong>Title:</strong> <span id="title"></span></p>
+      <p><strong>Description:</strong> <span id="description"></span></p>
+      <p><strong>Created By:</strong> <span id="createdBy"></span></p>
+      <p><strong>Members:</strong></p>
+      <ul id="membersList"></ul>
+    </div>
+
+    <hr />
+
+    <h3>Tasks</h3>
+    <ul id="taskList"></ul>
+
+    <h4>Add New Task</h4>
+    <form id="taskForm">
+      <input type="text" id="taskTitle" placeholder="Task title" required />
+      <textarea id="taskDescription" placeholder="Task description" required></textarea>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <br />
+    <a href="dashboard.html">← Back to Dashboard</a>
+  </div>
+
+  <script src="project.js"></script>
+</body>
+</html>

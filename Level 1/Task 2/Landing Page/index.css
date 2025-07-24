@@ -1,0 +1,220 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  /* font-family: Arial, sans-serif; */
+  /* line-height: 1.6; */
+  scroll-behavior: smooth;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* background: #333; */
+  z-index: 1000;
+}
+/* p{
+  font-size: 2rem;
+} */
+.navbar{
+  background-color: rgb(243, 225, 25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+.logo{
+   color: black;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  transition:all 1s ease-in-out 0.3s;
+}
+.logo:hover{
+  font-size: 2.5rem;
+  color: rgb(246, 0, 0);
+  transform: rotate(360deg);
+}
+#nav-links li a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s;
+  transition: #09ff26 0s ease-in-out o.3s;
+}
+#nav-links li a:hover{
+  color: #ff0000;
+}
+
+#nav-links{
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 150px;
+    padding: 2rem;
+  }
+    #nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+.hero-para{
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.hero-section-content h1{
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: 900;
+}
+.hero-get-started{
+  color: #ffffff;
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+}
+.hero-get-started:hover{
+  color: black;
+  background-color: rgb(243, 225, 25);
+  border-radius: 2%;
+  cursor: pointer;
+  border: none;
+}
+
+.hero-section{
+  background-image: url(pic4.jpg);
+}
+
+.why-frontend-section{
+  background-image: url(pic11.png);
+}
+.why-frontend-content{
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10%;
+}
+
+.Why-frontend-heading{
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 8%;
+}
+.Why-frontend-para{
+  font-size: 2rem;
+  font-weight: 400;
+}
+.roadmap-section{
+   background-image:  url('pic1.jpg');
+}
+.roadmap-section h2 {
+  color: #000000;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  z-index: 2;
+}
+.roadmap-list:hover{
+  background-color: rgb(243, 225, 25);
+  font-size: 1.5rem;
+}
+.roadmap-content{
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10%;
+}
+.roadmap-content li{
+  list-style: none;
+}
+.projects-section{
+  background-image: url(pic2.png);
+}
+.projects-container:hover{
+  background-color: rgb(255, 208, 0);
+  font-size: 1.5rem;
+}
+
+.projects-content{
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+.projects-content h2,p{
+  color: #000000;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+.contact-us-section{
+  background-image: url(pic10.jpg);
+}
+
+.contact-us-section h2{
+  color: #000000;
+  font-size: 4rem;
+  transform: translateY(-100px);
+}
+.contact-form input,textarea,button{
+  font-size: 1.5rem;
+  border: none;
+  margin: 10px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transform: translateY(50px);
+}
+.contact-form button:active{
+  background-color: #00ff0d;
+}
+ .contact-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100px);
+ }
+
+.contact-us-section,.projects-section,.roadmap-section,.why-frontend-section, .hero-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  text-align: center;
+}
+
+
+

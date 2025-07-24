@@ -1,0 +1,83 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: royalblue;
+  /* position:absolute; */
+  z-index: 1;
+}
+.extra{
+  visibility: hidden;
+}
+
+/* .calculator-body{
+  background-color: rgb(180, 70, 70);
+  height: 29rem;
+  width: 21rem;
+  border-radius: 5%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+} */
+.calculator-body {
+  background-color: rgb(180, 70, 70);
+  width: 90vw;
+  max-width: 21rem;
+  height: auto;
+  aspect-ratio: 3 / 4; /* Keeps the aspect ratio similar to your original */
+  border-radius: 5%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+.display{
+  color: #000;
+  width: 90%;
+  height: 3.2rem;
+  border-radius: 10px;
+  text-align: right;
+  margin-left: 5%;
+  margin-top: 8%;
+  font-size: 2rem;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+}
+/* .buttons{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+  margin-left: 10%;} */
+  .buttons{
+  background-color: rgb(180, 70, 70);  
+  gap: 7px;  
+  margin: 10px 4px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+button{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+#equals-to{
+  background-color: aqua;
+}
+h1{
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  margin-top: 5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+}
